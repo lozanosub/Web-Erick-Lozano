@@ -1,0 +1,119 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajos</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <style>
+
+    </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Obtén el modal
+        var modal = document.getElementById("modalImagen");
+
+        // Obtiene todas las imágenes dentro de la galería y añade un evento de clic a cada una
+        var imagenes = document.querySelectorAll(".galeria .cajadeimagen img");
+        imagenes.forEach(function(img) {
+            img.onclick = function(){
+                modal.style.display = "block";
+                var modalImg = document.getElementById("imgAmpliada");
+                modalImg.src = this.src;
+                // Añade aquí cualquier otra lógica necesaria
+            }
+        });
+
+        // Obtén el elemento <span> que cierra el modal
+        var span = document.getElementsByClassName("cerrar")[0];
+
+        // Cuando el usuario hace clic en <span> (x), cierra el modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+    });
+</script>
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1><a href="/index.html">Portafolio Erick Lozano</a></h1>
+    </header>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <a href="trabajos.html">Trabajos</a>
+
+        <a href="bio.html">Bio</a>
+        <a href="arte.html">Arte</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <!-- Sección Principal con Imagen -->
+    <div class="galeria">
+        <div class="cajadeimagen">
+            <img src="/imagenes/galeria/hombre-1trabaja.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1Texto 
+                para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para 
+                imagen 1 Texto para imagen 1 Texto para imagen 1</p>
+
+        </div>
+        <div class="cajadeimagen">
+            <img src="/imagenes/galeria/diseñadora.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1</p>
+            
+        </div>
+        <div class="cajadeimagen">
+            <img src="/imagenes/galeria/hombre-1trabaja.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1Texto 
+                para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para 
+                imagen 1 Texto para imagen 1 Texto para imagen 1</p>
+
+        </div>
+        <div class="cajadeimagen">
+            <img src="/imagenes/galeria/diseñadora.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1</p>
+
+        </div>
+        <div class="cajadeimagen">
+            <img src="/imagenes/galeria/hombre-1trabaja.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1Texto 
+                para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para 
+                imagen 1 Texto para imagen 1 Texto para imagen 1</p>
+
+        </div>
+        <div class="cajadeimagen">
+            <img src="/imagenes/galeria/diseñadora.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1</p>
+
+        </div>
+        <div class="cajadeimagen">
+            <img src="/imagenes/galeria/hombre-1trabaja.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1Texto 
+                para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para 
+                imagen 1 Texto para imagen 1 Texto para imagen 1</p>
+
+        </div>
+        <div class="cajadeimagen">
+            <img src="/imagenes/galeria/diseñadora.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1</p>
+
+        </div>
+       
+       
+    </div>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2023 Tu Nombre - Todos los derechos reservados</p>
+    </footer>
+    <div id="modalImagen" class="modal">
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="imgAmpliada">
+        <div id="caption"></div>
+    </div>
+</body>
+
+</html>
