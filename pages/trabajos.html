@@ -10,24 +10,24 @@
     </style>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Obtén el modal
+        // Modal
         var modal = document.getElementById("modalImagen");
 
-        // Obtiene todas las imágenes dentro de la galería y añade un evento de clic a cada una
+        // Creacion de cajas contenedoras de imagenees
         var imagenes = document.querySelectorAll(".galeria .cajadeimagen img");
         imagenes.forEach(function(img) {
             img.onclick = function(){
                 modal.style.display = "block";
                 var modalImg = document.getElementById("imgAmpliada");
                 modalImg.src = this.src;
-                // Añade aquí cualquier otra lógica necesaria
+                // tener en cuenta detalle del texto
             }
         });
 
-        // Obtén el elemento <span> que cierra el modal
+        //Elemento <span> que cierra el modal
         var span = document.getElementsByClassName("cerrar")[0];
 
-        // Cuando el usuario hace clic en <span> (x), cierra el modal
+        // Con clic en <span> (x),  se cierra el modal
         span.onclick = function() { 
             modal.style.display = "none";
         }
@@ -39,7 +39,7 @@
 
     <!-- Encabezado -->
     <header>
-        <h1><a href="/index.html">Portafolio Erick Lozano</a></h1>
+        <h1><a href="/index.html">Portafolio Erick Lozano <font color="9900FF"></a></h1>
     </header>
 
     <!-- Barra de Navegación -->
@@ -51,53 +51,65 @@
         <a href="contacto.html">Contacto</a>
     </nav>
 
-    <!-- Sección Principal con Imagen -->
+    <!-- Sección Principal con Imagen, mosaico de imagenes con textos a pie de imagen -->
     <div class="galeria">
         <div class="cajadeimagen">
-            <img src="/imagenes/galeria/hombre-1trabaja.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1Texto 
-                para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para 
-                imagen 1 Texto para imagen 1 Texto para imagen 1</p>
+            <img src="/imagenes/galeria/trabajo-001.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1</p>
 
         </div>
         <div class="cajadeimagen">
-            <img src="/imagenes/galeria/diseñadora.png" alt="Descripción de la imagen 1">
+            <img src="/imagenes/galeria/trabajo-002.png" alt="Descripción de la imagen 1">
             <p>Texto para diseño</p>
             
         </div>
         <div class="cajadeimagen">
-            <img src="/imagenes/galeria/hombre-1trabaja.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1Texto 
-                para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para 
-                imagen 1 Texto para imagen 1 Texto para imagen 1</p>
+            <img src="/imagenes/galeria/trabajo-003.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen </p>
 
         </div>
         <div class="cajadeimagen">
-            <img src="/imagenes/galeria/diseñadora.png" alt="Descripción de la imagen 1">
+            <img src="/imagenes/galeria/trabajo-004.png" alt="Descripción de la imagen 1">
             <p>Texto para imagen 1</p>
 
         </div>
         <div class="cajadeimagen">
-            <img src="/imagenes/galeria/hombre-1trabaja.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1Texto 
-                para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para 
-                imagen 1 Texto para imagen 1 Texto para imagen 1</p>
-
-        </div>
-        <div class="cajadeimagen">
-            <img src="/imagenes/galeria/diseñadora.png" alt="Descripción de la imagen 1">
+            <img src="/imagenes/galeria/trabajo-005.png" alt="Descripción de la imagen 1">
             <p>Texto para imagen 1</p>
 
         </div>
         <div class="cajadeimagen">
-            <img src="/imagenes/galeria/hombre-1trabaja.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1Texto 
-                para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para imagen 1 Texto para 
-                imagen 1 Texto para imagen 1 Texto para imagen 1</p>
+            <img src="/imagenes/galeria/trabajo-006.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1</p>
 
         </div>
         <div class="cajadeimagen">
-            <img src="/imagenes/galeria/diseñadora.png" alt="Descripción de la imagen 1">
+            <img src="/imagenes/galeria/trabajo-007.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1</p>
+
+        </div>
+        <div class="cajadeimagen">
+            <img src="/imagenes/galeria/trabajo-008.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1</p>
+
+        </div>
+        <div class="cajadeimagen">
+            <img src="/imagenes/galeria/trabajo-008.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1</p>
+
+        </div>
+        <div class="cajadeimagen">
+            <img src="/imagenes/galeria/trabajo-008.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1</p>
+
+        </div>
+        <div class="cajadeimagen">
+            <img src="/imagenes/galeria/trabajo-008.png" alt="Descripción de la imagen 1">
+            <p>Texto para imagen 1</p>
+
+        </div>
+        <div class="cajadeimagen">
+            <img src="/imagenes/galeria/trabajo-008.png" alt="Descripción de la imagen 1">
             <p>Texto para imagen 1</p>
 
         </div>

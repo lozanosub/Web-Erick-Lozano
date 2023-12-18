@@ -2,6 +2,23 @@ body {
     margin: 5;
     padding: 5;
     font-family: Poppins
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('/imagenes/galeria/fondo-index'); /* Ruta de la imagen de fondo */
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+        color: #fff; /* Color del texto en la cabecera */
+    }
+    
+    header {
+        background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para mejorar la legibilidad del texto */
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
 }
 
 header {
@@ -49,7 +66,7 @@ footer {
     padding: 10px;
 }
 .cajadeimagen  {
-    width: calc(25% - 10px); /* Cuatro cajas por fila, ajusta el espacio entre ellas */
+    width: calc(25% - 10px); /* Cuatro cajas por fila, y ajusté el espacio entre ellas */
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -58,8 +75,8 @@ footer {
 }
 .galeria img {
     width: 100%;
-    border: 2px solid #f2f2f2; /* Añade un borde a la imagen */
-    border-radius: 8px; /* Opcional: bordes redondeados / max-width: 100%; / Máxima anchura es el 100% del contenedor */
+    border: 2px solid #f2f2f2; /* Añado un borde a la imagen */
+    border-radius: 8px; /* Bordes redondeados / max-width: 100%; / Máxima anchura es el 100% del contenedor */
     height: auto; /* Altura automática para mantener la proporción */
     display: block;
     margin-bottom: 10px; /* Espacio entre la imagen y el texto */
@@ -68,9 +85,9 @@ footer {
 .galeria p {
     text-align: center;
     margin-top: 5px;
-    overflow-y: auto; /* Habilita el desplazamiento vertical */
+    overflow-y: auto; /* Habilito el desplazamiento vertical del texto */
     height: 5em; /* Altura basada en el tamaño de línea */
-    line-height: 1em; /* Ajusta esta línea según el diseño */
+    line-height: 1em; /* Ajusto esta línea según el diseño */
   
 }
 /* Responsividad */
@@ -95,7 +112,7 @@ footer {
     top: 0;
     width: 100%; /* Ancho total */
     height: 100%; /* Altura total */
-    overflow: auto; /* Habilita el scroll si es necesario */
+    overflow: auto; /* Se habilita el scroll si es necesario */
     background-color: rgb(0,0,0); /* Fondo negro */
     background-color: rgba(0,0,0,0.9); /* Negro con opacidad */
 }
