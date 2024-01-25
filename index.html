@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -5,7 +6,78 @@
     <title>Inicio</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <style>
-    
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins';
+            background-image: url('/imagenes/galeria/fondo-index.jpg'); /* Ruta de la imagen de fondo */
+            background-size: cover; /* Tamaño de la imagen para cubrir todo el fondo */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+            color: #fff; /* Color del texto en el fondo */
+        }
+
+        header {
+            background-color: #000000b3; /* Fondo cabecera index */
+            color: #ffffff; /* Color del texto en la cabecera index */
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #000000;
+            padding: 10px;
+        }
+
+        nav a {
+    text-decoration: none;
+    color: #df60af;
+    padding: 10px;
+    margin: 0 10px;
+    border: 1px solid #f4f1f3; /* Añade el punto y coma al final de esta línea */
+    border-radius: 5px;
+}
+
+section {
+    text-align: center;
+    padding: 40px;
+}
+        footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .contenedor-texto {
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el texto */
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 80%; /* Máximo ancho del contenedor de texto */
+            margin: 0 auto; /* Centra el contenedor de texto horizontalmente */
+        }
+
+        .contenedor-texto p {
+            color: #fff;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .contenedor-texto {
+                max-width: 90%; /* Ajusta el ancho máximo para pantallas medianas */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .contenedor-texto {
+                max-width: 100%; /* Ajusta el ancho máximo para pantallas pequeñas */
+            }
+        }
     </style>
 </head>
 <body>
@@ -18,26 +90,21 @@
     <!-- Barra de Navegación -->
     <nav>
         <a href="pages/trabajos.html">Trabajos</a>
-        
         <a href="pages/bio.html">Bio</a>
         <a href="pages/arte.html">Arte</a>
         <a href="pages/contacto.html">Contacto</a>
     </nav>
 
-    <!-- Sección Principal con Imagen -->
-    <section><article>
-        <img src="/imagenes/galeria/fondo-index.jpg" alt="Tu Imagen"> 
-    </article>
-    <article>
-        <p>De profesión soy Lic. en Diseño Gráfico con mas de 15 años de experiencia. Mi inquietud por las nuevas tecnologías y el deseo de aportar a la experiencia de los usuarios me motivo a abordar las disciplinas del UX/UI, 
-            desafiando mi pasión por ayudar a mejorar la vida de los demás a través del diseño.</p>
-
-    </article>
+    <!-- Sección Principal con Imagen de Fondo -->
+    <section>
+        <div class="contenedor-texto">
+            <p>De profesión soy Lic. en Diseño Gráfico con más de 15 años de experiencia. Mi inquietud por las nuevas tecnologías y el deseo de aportar a la experiencia de los usuarios me motivó a abordar las disciplinas del UX/UI, desafiando mi pasión por ayudar a mejorar la vida de los demás a través del diseño.</p>
+        </div>
+    </section>
 
     <!-- Pie de Página -->
     <footer>
         <p>&copy; 2023 Tu Nombre - Todos los derechos reservados</p>
     </footer>
-
 </body>
 </html>

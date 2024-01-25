@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -5,127 +6,222 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajos</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
     <style>
+        /* Puedes agregar estilos específicos para la sección de Trabajos aquí si es necesario */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins';
+            background-image: url('/imagenes/galeria/fondo-index.jpg'); /* Ruta de la imagen de fondo */
+            background-size: cover; /* Tamaño de la imagen para cubrir todo el fondo */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+            color: #fff; /* Color del texto a pie de foto */
 
+            margin-bottom: 60px; /* Ajuste del margen inferior del cuerpo para el footer */
+        }
+
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .cajadeimagen {
+            margin: 10px;
+            text-align: center;
+        }
+
+        .cajadeimagen img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            cursor: pointer;
+            border: 2px solid #fff;
+            transition: border 0.3s;
+        }
+
+        .cajadeimagen img:hover {
+            border: 2px solid #000;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-contenido {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .cerrar {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
     </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Modal
-        var modal = document.getElementById("modalImagen");
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Modal
+            var modal = document.getElementById("modalImagen");
 
-        // Creacion de cajas contenedoras de imagenees
-        var imagenes = document.querySelectorAll(".galeria .cajadeimagen img");
-        imagenes.forEach(function(img) {
-            img.onclick = function(){
-                modal.style.display = "block";
-                var modalImg = document.getElementById("imgAmpliada");
-                modalImg.src = this.src;
-                // tener en cuenta detalle del texto
+            // Creación de cajas contenedoras de imágenes
+            var imagenes = document.querySelectorAll(".galeria .cajadeimagen img");
+            imagenes.forEach(function (img) {
+                img.onclick = function () {
+                    modal.style.display = "block";
+                    var modalImg = document.getElementById("imgAmpliada");
+                    modalImg.src = this.src;
+                }
+            });
+
+            // Elemento <span> que cierra el modal
+            var span = document.getElementsByClassName("cerrar")[0];
+
+            // Con clic en <span> (x),  se cierra el modal
+            span.onclick = function () {
+                modal.style.display = "none";
             }
         });
-
-        //Elemento <span> que cierra el modal
-        var span = document.getElementsByClassName("cerrar")[0];
-
-        // Con clic en <span> (x),  se cierra el modal
-        span.onclick = function() { 
-            modal.style.display = "none";
-        }
-    });
-</script>
+    </script>
 </head>
 
 <body>
 
     <!-- Encabezado -->
     <header>
-        <h1><a href="/index.html">Portafolio Erick Lozano <font color="9900FF"></a></h1>
+        <h1><a href="/index.html">Portafolio Erick Lozano</a></h1>
     </header>
 
-    <!-- Barra de Navegación -->
-    <nav>
-        <a href="trabajos.html">Trabajos</a>
-
-        <a href="bio.html">Bio</a>
-        <a href="arte.html">Arte</a>
-        <a href="contacto.html">Contacto</a>
+    <!-- Barra de Navegación con Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Menú</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="trabajos.html">Trabajos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bio.html">Bio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="arte.html">Arte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Sección Principal con Imagen, mosaico de imagenes con textos a pie de imagen -->
-    <div class="galeria">
-        <div class="cajadeimagen">
-            <img src="/imagenes/galeria/trabajo-001.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen 1</p>
+    <section class="cajadeTexto">
+        <p>Trabajos realizados para distintos clientes en las áreas de publicidad,
+            UX/UI, diseño e indumentaria</p>
+        <div class="galeria">
+        </div>
+    </section>
+
+    <!-- Sección Principal con Imagen, mosaico de imágenes con textos a pie de imagen -->
+    <section>
+        <div class="galeria">
+            <div class="cajadeimagen">
+                <img src="/imagenes/galeria/trabajo-001.png" alt="Diseño Publicitario">
+                <p>Diseño Publicitario / Cliente / Salazar israel</p>
+            </div>
+
+            <div class="cajadeimagen">
+                <img src="/imagenes/galeria/trabajo-002.png" alt="Diseño Publicitario">
+                <p>Diseño Publicitario / Cliente / LED Design</p>
+            </div>
+
+            <div class="cajadeimagen">
+                <img src="/imagenes/galeria/trabajo-003.png" alt="Diseño Publicitario">
+                <p>Diseño Publicitario / Cliente / LED Design</p>
+            </div>
+
+            <div class="cajadeimagen">
+                <img src="/imagenes/galeria/trabajo-004.png" alt="Diseño Publicitario">
+                <p>Diseño Indumentaris / Cliente / Guaipao</p>
+            </div>
+
+            <div class="cajadeimagen">
+                <img src="/imagenes/galeria/trabajo-005.png" alt="Diseño Publicitario">
+                <p>Diseño UX / Cliente / Bozon</p>
+            </div>
+
+            <div class="cajadeimagen">
+                <img src="/imagenes/galeria/trabajo-006.png" alt="Diseño Publicitario">
+                <p>Diseño UX / Cliente / Bozon</p>
+            </div>
+
+            <div class="cajadeimagen">
+                <img src="/imagenes/galeria/trabajo-007.png" alt="Diseño Publicitario">
+                <p>Diseño UX / Cliente / EMBAVEN</p>
+            </div>
+
+            <div class="cajadeimagen">
+                <img src="/imagenes/galeria/trabajo-008.png" alt="Diseño Publicitario">
+                <p>Diseño WEB Prototipo / Cliente / Quiksilver</p>
+            </div>
+
+            <div class="cajadeimagen">
+                <img src="/imagenes/galeria/trabajo-009.png" alt="Diseño Publicitario">
+                <p>Diseño Gráfico / Cliente / Coca-Cola</p>
+            </div>
+
+            <div class="cajadeimagen">
+                <img src="/imagenes/galeria/trabajo-0010.png" alt="Diseño Publicitario">
+                <p>Diseño Gráfico / Cliente / Coca-Cola</p>
+            </div>
+
+            <div class="cajadeimagen">
+                <img src="/imagenes/galeria/trabajo-0011.png" alt="Diseño Publicitario">
+                <p>Diseño Gráfico / Cliente / WOM</p>
+            </div>
+
+            <div class="cajadeimagen">
+                <img src="/imagenes/galeria/trabajo-0012.png" alt="Diseño Publicitario">
+                <p>Diseño Gráfico / Cliente / WOM</p>
+            </div>
 
         </div>
-        <div class="cajadeimagen">
-            <img src="/imagenes/galeria/trabajo-002.png" alt="Descripción de la imagen 1">
-            <p>Texto para diseño</p>
-            
-        </div>
-        <div class="cajadeimagen">
-            <img src="/imagenes/galeria/trabajo-003.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen </p>
-
-        </div>
-        <div class="cajadeimagen">
-            <img src="/imagenes/galeria/trabajo-004.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen 1</p>
-
-        </div>
-        <div class="cajadeimagen">
-            <img src="/imagenes/galeria/trabajo-005.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen 1</p>
-
-        </div>
-        <div class="cajadeimagen">
-            <img src="/imagenes/galeria/trabajo-006.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen 1</p>
-
-        </div>
-        <div class="cajadeimagen">
-            <img src="/imagenes/galeria/trabajo-007.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen 1</p>
-
-        </div>
-        <div class="cajadeimagen">
-            <img src="/imagenes/galeria/trabajo-008.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen 1</p>
-
-        </div>
-        <div class="cajadeimagen">
-            <img src="/imagenes/galeria/trabajo-008.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen 1</p>
-
-        </div>
-        <div class="cajadeimagen">
-            <img src="/imagenes/galeria/trabajo-008.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen 1</p>
-
-        </div>
-        <div class="cajadeimagen">
-            <img src="/imagenes/galeria/trabajo-008.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen 1</p>
-
-        </div>
-        <div class="cajadeimagen">
-            <img src="/imagenes/galeria/trabajo-008.png" alt="Descripción de la imagen 1">
-            <p>Texto para imagen 1</p>
-
-        </div>
-       
-       
-    </div>
-
-    <!-- Pie de Página -->
-    <footer>
+    </section>
+    <!-- Pie de Página con Bootstrap -->
+    <footer class="bg-dark text-white text-center py-3 fixed-bottom">
         <p>&copy; 2023 Tu Nombre - Todos los derechos reservados</p>
     </footer>
+
     <div id="modalImagen" class="modal">
         <span class="cerrar">&times;</span>
         <img class="modal-contenido" id="imgAmpliada">
         <div id="caption"></div>
     </div>
+
+    <!-- Scripts de Bootstrap al final del archivo -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>

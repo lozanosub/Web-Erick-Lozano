@@ -1,11 +1,19 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
-     
+        /* Estilos para la imagen */
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px; /* Agrega margen inferior para separar la imagen del contenido */
+        }
     </style>
 </head>
 <body>
@@ -15,28 +23,46 @@
         <h1><a href="/index.html">Portafolio Erick Lozano</a></h1>
     </header>
 
-    <!-- Barra de Navegación -->
-    <nav>
-        <a href="trabajos.html">Trabajos</a>
-        
-        <a href="bio.html">Bio</a>
-        <a href="arte.html">Arte</a>
-        <a href="contacto.html">Contacto</a>
+     <!-- Barra de Navegación con Bootstrap -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Menú</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="trabajos.html">Trabajos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bio.html">Bio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="arte.html">Arte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Sección Principal con Imagen -->
-    <section><article>
-        <img src="tu_imagen.jpg" alt="Tu Imagen"> 
-    </article>
-    <article>h3 kfkfjfjf
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus nobis consequatur at expedita modi dolore, laudantium similique asperiores praesentium ex tempore illo! Et sit, necessitatibus temporibus cum voluptate omnis. Voluptatem aliquid hic eum minus amet nisi cumque quo. Dicta fuga voluptate maiores sequi voluptatem repellendus quia reprehenderit esse aliquid quaerat.</p>
+    <section class="container">
+        <!-- Agrega tu contenido aquí -->
+        <img src="../imagenes/galeria/arte001.jpg" alt="Tu Imagen"> 
+    </section>
 
-    </article>
-
-    <!-- Pie de Página -->
-    <footer>
+    <!-- Pie de Página con Bootstrap -->
+    <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2023 Tu Nombre - Todos los derechos reservados</p>
     </footer>
+
+    <!-- Scripts de Bootstrap al final del archivo -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>

@@ -1,109 +1,112 @@
+@charset "UTF-8";
+
+/* Reset de Estilos */
 body {
-    margin: 5;
-    padding: 5;
-    font-family: Poppins
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-image: url('/imagenes/galeria/fondo-index'); /* Ruta de la imagen de fondo */
-        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
-        background-position: center; /* Centra la imagen */
-        background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
-        color: #fff; /* Color del texto en la cabecera */
-    }
-    
-    header {
-        background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para mejorar la legibilidad del texto */
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-    }
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins"; /* Asegúrate de incluir comillas si usas una fuente con espacios en el nombre */
 }
 
+/* Estilos Globales */
 header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+  background-color: #000000;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    background-color: #eee;
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+  padding: 10px;
 }
 
 nav a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px;
-    margin: 0 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  text-decoration: none;
+  color: #000000;
+  padding: 10px;
+  margin: 0 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
 }
 
 section {
-    text-align: center;
-    padding: 40px;
+  text-align: center;
+  padding: 40px;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: #040404;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
+
+#bio {
+  /* Estilos para la sección bio */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
+  color: white; /* Texto en blanco para mayor contraste */
+  padding: 20px; /* Ajusta el relleno según sea necesario */
+
+  h2,
+  p {
+    /* Estilos adicionales para el texto dentro de la sección de biografía */
+    margin-bottom: 20px; /* Añade espacio inferior entre elementos */
+  }
+}
+
+body.contacto {
+  background-color: #000000;
+  padding: 20px;
+  text-align: center;
+  color: #000000; /* Color del texto en la sección de contacto */
+}
+
 .galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
 }
-.cajadeimagen  {
-    width: calc(25% - 10px); /* Cuatro cajas por fila, y ajusté el espacio entre ellas */
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra la imagen horizontalmente */
-    justify-content: center; /* Centra la imagen verticalmente */
+
+.cajadeimagen {
+  width: calc(25% - 10px); /* Cuatro cajas por fila, y ajusté el espacio entre ellas */
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra la imagen horizontalmente */
+  justify-content: center; /* Centra la imagen verticalmente */
 }
+
 .galeria img {
-    width: 100%;
-    border: 2px solid #f2f2f2; /* Añado un borde a la imagen */
-    border-radius: 8px; /* Bordes redondeados / max-width: 100%; / Máxima anchura es el 100% del contenedor */
-    height: auto; /* Altura automática para mantener la proporción */
-    display: block;
-    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+  width: 100%;
+  border: 2px solid #f2f2f2; /* Añade un borde a la imagen si lo deseas */
+  border-radius: 8px; /* Bordes redondeados si lo deseas */
+  height: auto; /* Altura automática para mantener la proporción */
+  display: block;
+  margin-bottom: 10px; /* Espacio entre la imagen y el texto */
 }
 
 .galeria p {
-    text-align: center;
-    margin-top: 5px;
-    overflow-y: auto; /* Habilito el desplazamiento vertical del texto */
-    height: 5em; /* Altura basada en el tamaño de línea */
-    line-height: 1em; /* Ajusto esta línea según el diseño */
-  
-}
-/* Responsividad */
-@media (max-width: 600px) {
-    .galeria .cajadeimagen{
-        width: calc(50% - 10px); /* Dos cajas por fila en pantallas pequeñas */
-    }
+  text-align: center;
+  margin-top: 5px;
+  overflow-y: auto; /* Habilito el desplazamiento vertical del texto */
+  height: 5em; /* Altura basada en el tamaño de línea */
+  line-height: 1em; /* Ajusto esta línea según el diseño */
 }
 
-@media (max-width: 400px) {
-    .galeria .cajadeimagen {
-        width: 100%; /* Una sola caja por fila en pantallas muy pequeñas */
-    }
-}
-/* Estilos para el modal */
-.modal {
+/* Responsividad */
+@media (max-width: 600px) {
+  .galeria .cajadeimagen {
+    width: calc(50% - 10px); /* Dos cajas por fila en pantallas pequeñas */
+  }
+
+  .modal {
     display: none; /* Oculto por defecto */
     position: fixed;
     z-index: 1;
@@ -113,18 +116,18 @@ footer {
     width: 100%; /* Ancho total */
     height: 100%; /* Altura total */
     overflow: auto; /* Se habilita el scroll si es necesario */
-    background-color: rgb(0,0,0); /* Fondo negro */
-    background-color: rgba(0,0,0,0.9); /* Negro con opacidad */
-}
+    background-color: rgb(0, 0, 0); /* Fondo negro */
+    background-color: rgba(0, 0, 0, 0.9); /* Negro con opacidad */
+  }
 
-.modal-contenido {
+  .modal-contenido {
     margin: auto;
     display: block;
     width: 80%;
     max-width: 700px; /* Máximo ancho de la imagen */
-}
+  }
 
-.cerrar {
+  .cerrar {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -132,4 +135,25 @@ footer {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+  }
+}
+
+/* ESTILO SECCION ARTE */
+#arte {
+  background-color: #000000;
+  padding: 20px;
+  text-align: center;
+}
+
+#seccion-arte p {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Responsividad para la sección de arte */
+@media (max-width: 600px) {
+  #arte {
+    max-width: 100%; /* Hace que el video ocupe el ancho completo en pantallas pequeñas */
+  }
 }
