@@ -14,21 +14,16 @@ header {
     padding: 20px;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #000000;
-    padding: 10px;
-}
-
-nav a {
+/* Agrega esta clase para los botones del navbar */
+.nav-button {
     text-decoration: none;
-    color: #000000;
+    color: #df60af;
     padding: 10px;
     margin: 0 10px;
-    border: 1px solid #000000;
+    border: 1px solid #f4f1f3;
     border-radius: 5px;
 }
+
 
 section {
     text-align: center;
