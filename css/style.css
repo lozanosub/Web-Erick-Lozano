@@ -34,16 +34,6 @@ body {
   font-family: "Poppins"; /* Asegúrate de incluir comillas si usas una fuente con espacios en el nombre */
 }
 
-/* Agrega esta clase para los botones del navbar */
-.nav-button {
-  text-decoration: none;
-  color: #df60af;
-  padding: 10px;
-  margin: 0 10px;
-  border: 1px solid #f4f1f3;
-  border-radius: 5px;
-}
-
 section {
   text-align: center;
   padding: 40px;
@@ -61,7 +51,6 @@ footer {
 
 #bio {
   /* Estilos para la sección bio */
-  /* Estilos para la sección de contacto */
   /* Estilos Específicos para Galería */
   /* Estilos para el modal */
   /* ESTILO SECCION ARTE */
@@ -74,12 +63,6 @@ footer {
 #bio #bio #bio h2, #bio #bio #bio p {
   /* Estilos adicionales para el texto dentro de la sección de biografía */
   margin-bottom: 20px; /* Añade espacio inferior entre elementos */
-}
-#bio body.contacto {
-  background-color: #000000;
-  padding: 20px;
-  text-align: center;
-  color: #000000; /* Color del texto en la sección de contacto */
 }
 #bio .galeria {
   display: flex;
