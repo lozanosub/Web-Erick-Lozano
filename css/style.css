@@ -1,5 +1,32 @@
 @charset "UTF-8";
+/* Estilos Globales */
+header {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
 
+.contenedor-texto {
+  display: flex;
+  justify-content: left;
+  color: black;
+}
+.contenedor-texto p {
+  color: rgb(255, 255, 255);
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .galeria .cajadeimagen {
+    width: calc(50% - 10px); /* Dos cajas por fila en pantallas pequeñas */
+  }
+}
+@media (max-width: 400px) {
+  .galeria .cajadeimagen {
+    width: 100%; /* Una sola caja por fila en pantallas muy pequeñas */
+  }
+}
 /* Reset de Estilos */
 body {
   margin: 0;
@@ -7,27 +34,13 @@ body {
   font-family: "Poppins"; /* Asegúrate de incluir comillas si usas una fuente con espacios en el nombre */
 }
 
-/* Estilos Globales */
-header {
-  background-color: #000000;
-  color: #000000;
-  text-align: center;
-  padding: 20px;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  background-color: #000000;
-  padding: 10px;
-}
-
-nav a {
+/* Agrega esta clase para los botones del navbar */
+.nav-button {
   text-decoration: none;
-  color: #000000;
+  color: #df60af;
   padding: 10px;
   margin: 0 10px;
-  border: 1px solid #000000;
+  border: 1px solid #f4f1f3;
   border-radius: 5px;
 }
 
@@ -37,7 +50,7 @@ section {
 }
 
 footer {
-  background-color: #040404;
+  background-color: #000000;
   color: #fff;
   text-align: center;
   padding: 10px;
@@ -48,33 +61,34 @@ footer {
 
 #bio {
   /* Estilos para la sección bio */
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
-  color: white; /* Texto en blanco para mayor contraste */
-  padding: 20px; /* Ajusta el relleno según sea necesario */
-
-  h2,
-  p {
-    /* Estilos adicionales para el texto dentro de la sección de biografía */
-    margin-bottom: 20px; /* Añade espacio inferior entre elementos */
-  }
+  /* Estilos para la sección de contacto */
+  /* Estilos Específicos para Galería */
+  /* Estilos para el modal */
+  /* ESTILO SECCION ARTE */
+  /* Responsividad para la sección de arte */
 }
-
-body.contacto {
+#bio #bio #bio {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
+  padding: 20px; /* Ajusta el relleno según sea necesario */
+}
+#bio #bio #bio h2, #bio #bio #bio p {
+  /* Estilos adicionales para el texto dentro de la sección de biografía */
+  margin-bottom: 20px; /* Añade espacio inferior entre elementos */
+}
+#bio body.contacto {
   background-color: #000000;
   padding: 20px;
   text-align: center;
   color: #000000; /* Color del texto en la sección de contacto */
 }
-
-.galeria {
+#bio .galeria {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   padding: 10px;
 }
-
-.cajadeimagen {
+#bio .cajadeimagen {
   width: calc(25% - 10px); /* Cuatro cajas por fila, y ajusté el espacio entre ellas */
   margin-bottom: 10px;
   display: flex;
@@ -82,8 +96,7 @@ body.contacto {
   align-items: center; /* Centra la imagen horizontalmente */
   justify-content: center; /* Centra la imagen verticalmente */
 }
-
-.galeria img {
+#bio .galeria img {
   width: 100%;
   border: 2px solid #f2f2f2; /* Añade un borde a la imagen si lo deseas */
   border-radius: 8px; /* Bordes redondeados si lo deseas */
@@ -91,69 +104,55 @@ body.contacto {
   display: block;
   margin-bottom: 10px; /* Espacio entre la imagen y el texto */
 }
-
-.galeria p {
+#bio .galeria p {
   text-align: center;
   margin-top: 5px;
   overflow-y: auto; /* Habilito el desplazamiento vertical del texto */
   height: 5em; /* Altura basada en el tamaño de línea */
   line-height: 1em; /* Ajusto esta línea según el diseño */
 }
-
-/* Responsividad */
-@media (max-width: 600px) {
-  .galeria .cajadeimagen {
-    width: calc(50% - 10px); /* Dos cajas por fila en pantallas pequeñas */
-  }
-
-  .modal {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px; /* Ubicación desde la parte superior */
-    left: 0;
-    top: 0;
-    width: 100%; /* Ancho total */
-    height: 100%; /* Altura total */
-    overflow: auto; /* Se habilita el scroll si es necesario */
-    background-color: rgb(0, 0, 0); /* Fondo negro */
-    background-color: rgba(0, 0, 0, 0.9); /* Negro con opacidad */
-  }
-
-  .modal-contenido {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px; /* Máximo ancho de la imagen */
-  }
-
-  .cerrar {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-  }
+#bio .modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px; /* Ubicación desde la parte superior */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho total */
+  height: 100%; /* Altura total */
+  overflow: auto; /* Se habilita el scroll si es necesario */
+  background-color: rgb(0, 0, 0); /* Fondo negro */
+  background-color: rgba(0, 0, 0, 0.9); /* Negro con opacidad */
 }
-
-/* ESTILO SECCION ARTE */
-#arte {
+#bio .modal-contenido {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px; /* Máximo ancho de la imagen */
+}
+#bio .cerrar {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#bio #arte {
   background-color: #000000;
   padding: 20px;
   text-align: center;
 }
-
-#seccion-arte p {
+#bio #seccion-arte p {
   color: #fff;
   font-size: 16px;
   margin-top: 5px;
 }
-
-/* Responsividad para la sección de arte */
 @media (max-width: 600px) {
-  #arte {
+  #bio {
     max-width: 100%; /* Hace que el video ocupe el ancho completo en pantallas pequeñas */
   }
 }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,6 +1,19 @@
+@import "header.scss";
+
 @import "main.scss";
 
+/* Responsividad */
+@media (max-width: 600px) {
+    .galeria .cajadeimagen {
+        width: calc(50% - 10px); /* Dos cajas por fila en pantallas pequeñas */
+    }
+}
 
+@media (max-width: 400px) {
+    .galeria .cajadeimagen {
+        width: 100%; /* Una sola caja por fila en pantallas muy pequeñas */
+    }
+}
 /* Reset de Estilos */
 body {
     margin: 0;
@@ -8,14 +21,6 @@ body {
     font-family: 'Poppins'; /* Asegúrate de incluir comillas si usas una fuente con espacios en el nombre */
 }
 
-
-/* Estilos Globales */
-header {
-    background-color: #000000;
-    color: #000000;
-    text-align: center;
-    padding: 20px;
-}
 
 /* Agrega esta clase para los botones del navbar */
 .nav-button {
@@ -34,7 +39,7 @@ section {
 }
 
 footer {
-    background-color: #040404;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -102,18 +107,7 @@ body.contacto {
     line-height: 1em; /* Ajusto esta línea según el diseño */
 }
 
-/* Responsividad */
-@media (max-width: 600px) {
-    .galeria .cajadeimagen {
-        width: calc(50% - 10px); /* Dos cajas por fila en pantallas pequeñas */
-    }
-}
 
-@media (max-width: 400px) {
-    .galeria .cajadeimagen {
-        width: 100%; /* Una sola caja por fila en pantallas muy pequeñas */
-    }
-}
 
 /* Estilos para el modal */
 .modal {
