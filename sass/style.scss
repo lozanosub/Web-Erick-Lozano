@@ -20,7 +20,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins'; /* Asegúrate de incluir comillas si usas una fuente con espacios en el nombre */
+    font-family: 'Poppins'; /* */
 }
 
 section {
@@ -44,11 +44,11 @@ footer {
         #bio {
             background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
             
-            padding: 20px; /* Ajusta el relleno según sea necesario */
+            padding: 20px; /* Relleno */
         
             h2, p {
                 /* Estilos adicionales para el texto dentro de la sección de biografía */
-                margin-bottom: 20px; /* Añade espacio inferior entre elementos */
+                margin-bottom: 20px;
             }
         }
         
@@ -74,8 +74,8 @@ footer {
 
 .galeria img {
     width: 100%;
-    border: 2px solid #f2f2f2; /* Añade un borde a la imagen si lo deseas */
-    border-radius: 8px; /* Bordes redondeados si lo deseas */
+    border: 2px solid #f2f2f2; /* Borde de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
     height: auto; /* Altura automática para mantener la proporción */
     display: block;
     margin-bottom: 10px; /* Espacio entre la imagen y el texto */
